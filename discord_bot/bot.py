@@ -313,4 +313,4 @@ async def help(ctx):
     await ctx.send(embed=embed)
     
 bot.add_cog(Music(bot))
-bot.run('NDgzMjU2NTE1MDY3OTA0MDEy.DmUbcA.NXQudD1MHQzW4zPVoTCaJMaA5Yk', bot=True, reconnect=True)
+bot.run('BOT_TOKEN', bot=True, reconnect=True)
