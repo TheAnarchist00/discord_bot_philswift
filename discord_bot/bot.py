@@ -126,6 +126,8 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or('$'), description='
 
 game = discord.Game("PATCHING, SEALING, BONDING AND REPAIRING WITH FLEXTAPE!")
 
+rockpaperscissor = "rock", "paper", "scissor"
+
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -198,26 +200,6 @@ async def doit(ctx):
     await ctx.send('https://i.imgur.com/hoBbGBb.png')
 
 @bot.command()
-async def charity(ctx):
-    await ctx.send('Charity link https://bit.ly/IqT6zt pls help')
-
-@bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a+b)
-
-@bot.command()
-async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)
-
-@bot.command()
-async def subtract(ctx, a: int, b: int):
-    await ctx.send(a-b)
-
-@bot.command()
-async def divide(ctx, a: int, b: int):
-    await ctx.send(a/b)
-
-@bot.command()
 async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
@@ -247,6 +229,10 @@ async def fahim(ctx):
     await ctx.send("Definition of a fag")
 
 @bot.command()
+async def raiyan(ctx):
+    await ctx.send("Should go kill himself")
+
+@bot.command()
 async def NOGODNO(ctx):
     await ctx.send("https://www.youtube.com/watch?v=umDr0mPuyQc")
 
@@ -261,6 +247,10 @@ async def nope(ctx):
 @bot.command()
 async def gay(ctx):
     await ctx.send("https://www.youtube.com/watch?v=YaG5SAw1n0c")
+
+@bot.command()
+async def rps(ctx):
+    await ctx.send(random.choice(rockpaperscissor))
 
 @bot.command()
 async def info(ctx):
@@ -280,17 +270,12 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Phil Swift", description="A bot that can patch, bond, seal and repair anything. List of commands are:", color=0xeee657)
 
-    embed.add_field(name="$add X Y", value="Gives the addition of **X** and **Y**", inline=False)
-    embed.add_field(name="$multiply X Y", value="Gives the multiplication of **X** and **Y**", inline=False)
-    embed.add_field(name="$subtract X Y", value="Gives the subtraction of **X** and **Y**", inline=False)
-    embed.add_field(name="$divide X Y", value="Gives the division of **X** and **Y**", inline=False)
     embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
     embed.add_field(name="$cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
     embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
     embed.add_field(name="$help", value="Gives this message", inline=False)
     embed.add_field(name="$surprise", value="The Truth!", inline=False)
     embed.add_field(name="$goodbot", value="Why Thank you kind stranger", inline=False)
-    embed.add_field(name="$charity", value="Support charity with the money you waste on virtual skins", inline=False)
     embed.add_field(name="$roll", value="roll a dice NdN style", inline=False)
     embed.add_field(name="$swift", value="THE MAN, THE MYTH, THE LEGEND, PHIL SWIFT!!!", inline=False)
     embed.add_field(name="$doit", value="do it", inline=False)
@@ -304,11 +289,13 @@ async def help(ctx):
     embed.add_field(name="$nope", value="nope", inline=False)
     embed.add_field(name="$gay", value="HUH GAAAAAAYYY!!!", inline=False)
     embed.add_field(name="$yaya", value="kuro requested it", inline=False)
+    embed.add_field(name="$raiyan", value="Raiyan", inline=False)
     embed.add_field(name="$choose", value="Settle the score. Write down the two (or more) choices, and see what the man himself chooses.", inline=False)
     embed.add_field(name="$play", value="Play from my local library (not available atm due to restrictions imposed by my host)", inline=False)
     embed.add_field(name="$yt", value="Play from youtube (more trustworthy than stream)(not available atm due to restrictions imposed by my host)", inline=False)
     embed.add_field(name="$stream", value="stream from youtube (WIP)(not available atm due to restrictions imposed by my host)", inline=False)
     embed.add_field(name="$stop", value="stops in vc (not available atm due to restrictions imposed by my host)", inline=False)
+    embed.add_field(name="$rps", value="a very basic rock paper scissors", inline=False)
 
     await ctx.send(embed=embed)
     
