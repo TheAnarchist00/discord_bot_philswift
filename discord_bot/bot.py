@@ -126,7 +126,7 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or('$'), description='
 
 game = discord.Game("PATCHING, SEALING, BONDING AND REPAIRING WITH FLEXTAPE!")
 
-rockpaperscissor = "rock", "paper", "scissor"
+rps = "rock", "paper", "scissor"
 
 @bot.event
 async def on_ready():
@@ -176,7 +176,7 @@ async def swift(ctx):
 
 @bot.command()
 async def yaya(ctx):
-    await ctx.send('nope')
+    await ctx.send('yAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYAYA')
 
 @bot.command()
 async def joined(ctx, member: discord.Member):
@@ -185,7 +185,7 @@ async def joined(ctx, member: discord.Member):
 
 @bot.command()
 async def surprise(ctx):
-    await ctx.send('Shameer is a fag')
+    await ctx.send('Greenday is for fags')
 
 @bot.command()
 async def wot(ctx):
@@ -249,8 +249,40 @@ async def gay(ctx):
     await ctx.send("https://www.youtube.com/watch?v=YaG5SAw1n0c")
 
 @bot.command()
-async def rps(ctx):
-    await ctx.send(random.choice(rockpaperscissor))
+async def rock(ctx):
+    
+    if random.choice(rps) is "rock":
+        await ctx.send("I threw rock. The match is a draw.")
+    
+    elif random.choice(rps) is "scissor":
+        await ctx.send("I threw scissor. You win.")
+
+    elif random.choice(rps) is "paper":
+        await ctx.send("I threw paper. I win")
+
+@bot.command()
+async def paper(ctx):
+    
+    if random.choice(rps) is "rock":
+        await ctx.send("I threw rock. You win.")
+    
+    elif random.choice(rps) is "scissor":
+        await ctx.send("I threw scissor. I win.")
+
+    elif random.choice(rps) is "paper":
+        await ctx.send("I threw paper. The match is a draw.")
+
+@bot.command()
+async def scissors(ctx):
+    
+    if random.choice(rps) is "rock":
+        await ctx.send("I threw rock. I win.")
+    
+    if random.choice(rps) is "scissor":
+        await ctx.send("I threw scissor. The match is a draw.")
+
+    if random.choice(rps) is "paper":
+        await ctx.send("I threw paper. You win.")
 
 @bot.command()
 async def info(ctx):
@@ -295,7 +327,7 @@ async def help(ctx):
     embed.add_field(name="$yt", value="Play from youtube (more trustworthy than stream)(not available atm due to restrictions imposed by my host)", inline=False)
     embed.add_field(name="$stream", value="stream from youtube (WIP)(not available atm due to restrictions imposed by my host)", inline=False)
     embed.add_field(name="$stop", value="stops in vc (not available atm due to restrictions imposed by my host)", inline=False)
-    embed.add_field(name="$rps", value="a very basic rock paper scissors", inline=False)
+    embed.add_field(name="$rock, $paper, $scissor", value="play rock paper scissors", inline=False)
 
     await ctx.send(embed=embed)
     
